@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id='main'>background color changing in every 3 second</h1>
+    <button id="'start" >Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const array = ['red', 'blue', 'green', 'yellow', 'purple', 'pink', 'orange'];
+    let idx=0;
+    const changecolor =()=>{
+        while(i< array.length){
+            document.body.style.backgroundColor = array[idx];
+            idx++;
+        }
+    }
+
+    const start= document.getElementById('start').addEventListener('click', changecolor);
+
+    document.getElementById('stop').addEventListener('click', () => {
+        clearInterval(start);
+    });
+
+</script>
+</html>

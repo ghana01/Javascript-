@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <h1> chai and code </h1>
+ <button>Stop me</button>
+</body>
+
+<script>
+    // 1. setTimeout -> 
+   const changeme = setTimeout(()=>{
+        document.querySelector('h1').innerText = "changed by setTimeout"
+        document.querySelector('h1').style.color = "red"
+    },3000)
+    // how will i  stop this timeout
+
+    document.querySelector('button').addEventListener('click', () => {
+        clearTimeout(changeme)
+    })
+
+    // 2. setInterval -> 
+   const intervalId = setInterval(()=>{
+        document.querySelector('h1').innerText = "changed by setInterval"
+        document.querySelector('h1').style.color = "blue"
+    },3000)
+    // how will i  stop this interval
+
+    document.querySelector('button').addEventListener('click', () => {
+        clearInterval(intervalId)
+    })
+</script>
+</html>

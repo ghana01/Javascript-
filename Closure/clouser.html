@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>Closure Example</h1>
+    <p>Open the console to see the output of the closure example.</p>
+
+    
+</body>
+<script>
+    // Example : Using Closure to create a private counter
+    function createCounter() {
+        let count = 0; // private variable
+
+        return {
+            increment: function() {
+                count++;
+                return count;
+            },
+            decrement: function() {
+                count--;
+                return count;
+            },
+            getCount: function() {
+                return count;
+            }
+        };
+    }
+
+    const counter = createCounter();
+
+    console.log(counter.increment()); // 1
+    console.log(counter.increment()); // 2
+    console.log(counter.decrement()); // 1
+    console.log(counter.getCount());  // 1
+</script>
+</html>
