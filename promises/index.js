@@ -1,4 +1,17 @@
 // promises
+// promised are used to handel the async code in js
+// when promises is like the stored value which will be resolve in future
+// it is used to handle the asynchronous operations in js
+// it is a placeholder for a value that is not yet available but will be available in future
+//  when we called the or use the promises it means  the async operation is exectued and  the value is returned
+// promise return the value 
+// it has three states -> pending,fulfilled,rejected
+// pending -> initial state ,neither fulfilled nor rejected
+// fulfilled -> meaning that the operation completed successfully
+// rejected -> meaning that the operation failed
+
+// it return in two way either the promis get resolved and rejected
+// we can handle both the case using then and catch method
 
 // fetch('https://jsonplaceholder.typicode.com/posts/1').then(response => {
 //     return response.json();
@@ -33,6 +46,14 @@ const promise1 = new Promise((resolve,reject)=>{
 promise1.then(()=>{
     console.log('Promise 1 is consumed');
 })
+const promiseexample =new Promise((resolve,reject)=>{
+    //async task
+    setTimeout(()=>{
+        resolve('Data fetched successfully');
+    },2000);
+}).then((message)=>{
+    console.log(message);
+}); //
 
 // here is the breakdown of the above code  -> we create a promise which takes a function 
 // as an argument which has two parameters resolve and reject
@@ -61,6 +82,10 @@ promise2.then(()=>{
 }).then(()=>{
     console.log('I am also part of promise 2');
 })
+console.log(promise2); // output will be Promise { <pending> } because the promise is still pending
+// when we log the promise before it is resolved it will be in pending state
+// after 2 seconds when the promise is resolved it will be in fulfilled state
+
 
 // here we are chaining two then methods to the same promise
 // so when the promise is resolved both the then methods will be called in order
@@ -72,7 +97,7 @@ const promise3 = new Promise((resolve,reject)=>{
           resolve({userName: 'chai',email:"ghanshyamkumar@gmail",age:24})
     },1000)
 }).then((data)=>{
-    console.log(data);
+    console.log(data); // this will print the object {userName: 'chai',email:"ghanshyamkumar@gmail",age:24}
 })
 
 const promise4 = new Promise((resolve,reject)=>{
@@ -152,3 +177,6 @@ console.log('End of the file')
 // so when an async task is completed it is pushed to the callback queue and when the main thread is free it will pick the task from the callback queue and execute it
 // this is how javascript handles async tasks without blocking the main thread
 
+
+
+//

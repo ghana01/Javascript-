@@ -24,7 +24,7 @@ console.log(num3); // this will print NaN ->Not a Number
 // 3. Boolean to String
 let bool1 = true;
 let str4 = String(bool1);
-console.log(typeof str4);
+console.log(typeof str4);// this will print 'string'
 console.log(str4); // this will print 'true'
 
 // 4. String to Boolean
@@ -36,7 +36,7 @@ console.log(bool2); // this will print false
 // null to String
 let null1 = null;
 let str6 = String(null1);
-console.log(typeof str6);
+console.log(typeof str6); // this will print 'string'
 console.log(str6); // this will print ''
 // string to null
 // there is no direct way to convert string to null

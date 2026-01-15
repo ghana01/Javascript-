@@ -20,3 +20,11 @@ console.log(accountCity) // This will work because accountCity is a global varia
 console.log(accountState)// This will print undefined because accountState is declared but not initialized
 
 console.table([accountId, accountName, accountEmail, accountState ]); // This will display the variables in a table format in the console
+
+// variable   it stored data value to used in program
+// there are 3 way to declre the varible in js
+//var (we dont use any more  because of scope issue) 
+// let  it is widely used now day ,block scope varible
+// const it is also a block scope varbile but it value cant be changed/reassigned
+
+

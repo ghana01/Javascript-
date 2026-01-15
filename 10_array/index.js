@@ -10,7 +10,7 @@ console.log(typeof myarr) // object
 const newarr = myarr;
 newarr.push(100)
 console.log(myarr) // original array is also changed
-console.log(newarr)
+console.log(newarr) // [1,32,4,34,5,6,7,8,9,100]
 
 // to make a deep copy of array we can use slice() method
 const newarr2 = myarr.slice(0) // it will make a deep copy of original array
@@ -24,6 +24,8 @@ console.log(myarr) //this print the original array after removing elements
 
 myarr.splice(2,0,1000,2000) // it will add 1000 and 2000 at index 2
 console.log(myarr) //this print the original array after adding elements
+//putput of above line [1,32,1000,2000,7,8,9,100]
+
 
 //array method
 console.log(myarr.length) // length of array

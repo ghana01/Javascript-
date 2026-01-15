@@ -23,6 +23,13 @@ const doubled = numbers.map(n => n * 2); // [2, 4, 6, 8]
 // filter: creates a new array with only values that pass a test
 const evens = numbers.filter(n => n % 2 === 0); // [2, 4]
 
+// reduce: reduces the array to a single value
+const sum = numbers.reduce((acc, n) => acc + n, 0); // 10
+
+console.log(doubled);
+console.log(evens);
+console.log(sum);
+
 const myArray = [1, 2, 3];
 console.log(typeof myArray); // "object"
 console.log(Array.isArray(myArray));    // true

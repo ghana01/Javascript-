@@ -5,13 +5,47 @@
 // function is a way to encapsulate a set of statements together to perform a specific task
 // function is a way to organize code into smaller, manageable and reusable pieces
 
+function a(){
+    console.log("function a is called")
 
+}
+a() // function call or function invocation this will print function a is called   
+// function expression
+const b = function (){
+    console.log("function b is called")
+}
+b()  // function call or function invocation this will print function b is called
+// in function expression the function is assigned to a variable
+// so we can call the function using the variable name/
+
+// major diff between the function and function expression is hoisting
+// function declaration is hoisted
+// function expression is hoisted as a variable with undefined value
+c(); // this will print the -> function c is calle
+d();// this will throw an error -> d is not a function it is a varible with assigned function 
+function c(){
+    console.log("function c is called")
+}
+const d=function (){
+    console.log("function d is called")
+}
 
 function sayMyname(){
     console.log('my name is ghan')
 }
 sayMyname() // function call or function invocation this will print my name is ghan
 
+//anonymouse function  -> a function wihout the name
+
+ function (){
+    console.log("anonymouse function")
+ }
+
+  var g =function xyz(){
+    console.log("named function expression")
+ };
+ g(); // this will print named function expression
+ //xyz() // this will throw an error because xyz is not defined in global scope
 function addTwoNumbers(num1,num2){ // num1 and num2 are parameters
     console.log(num1+num2)
     //return num1_num2;
@@ -102,3 +136,5 @@ handelarray3(...arr) // this will print 1 2 3 4 5
 handelarray3(10,20,30,40,50) // this will print 10 20 30 40 5
 handelarray3() // this will print 0 0 0 0 0 because we have given default value to parameters
 // function expression
+
+
